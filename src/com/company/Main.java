@@ -8,7 +8,7 @@ public class Main {
 //        int [] nums = {-2, 9, 11, 12, 13, 14, 15, 22, 142};
 //        System.out.println(hw1(nums, 15));
 //        hw2("Charlie");
-    hw4_2();
+        hw5();
 
     }
     static int hw1(int[] arr, int key) {
@@ -127,4 +127,24 @@ public class Main {
                     System.out.println("Element not found!");
                 }
             }
+
+
+    static void hw5()
+    {
+        int[] arrNum = {9, 7, 2, 11};
+        int n = arrNum.length;
+        for(int i = 1; i < n; i++)
+        {
+            int val = arrNum[i];
+            int j = i - 1;
+            while(j >= 0 && arrNum[j] > val)
+            {
+                arrNum[j + 1] = arrNum[j];
+                j = j - 1;
+            }
+            arrNum[j + 1] = val;
+        }
+        System.out.println(Arrays.toString(arrNum));
+    }
+
         }
